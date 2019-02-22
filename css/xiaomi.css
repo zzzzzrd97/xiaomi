@@ -63,8 +63,9 @@ a{
     float: right;
     text-align: center;
 }
-.header-car a:hover{
-    color: #ffffff;
+#car:hover{
+    color: #ff6700;
+    background: #fff;
 }
 /*小米首页导航结束*/
 /*小米首页搜索部分开始*/
