@@ -229,7 +229,7 @@ a{
         height: 69px;
         /*background: #000;*/
         position: absolute;
-        right: 0px;
+        right: 0;
         top: 195px;
         background: url("../img/icon-slides.png");
         background-position: 42px 0;
@@ -761,6 +761,10 @@ a{
         margin: 0 auto;
         float: left;
     }
+    .contentList-one:hover{
+        box-shadow: 0 0 2px #ccc;
+        transform: translateY(-2px);
+    }
     .contentList-one{
         width: 296px;
         height: 100%;
@@ -772,34 +776,46 @@ a{
         box-sizing: border-box;
         position: relative;
     }
+    .contentList-one:hover .JTleft{
+        display: block;
+        transition: all 0.6s;
+    }
+    .contentList-one:hover .JTright{
+        display: block;
+        transition: all 0.6s;
+    }
     .contentList-two{
         border-top: 1px solid #83c44e;
+    }
+    .JTleft:hover{
+        background-color: rgba(66,66,66,0.8);
+        cursor: pointer;
     }
     .JTleft{
         width: 20px;
         height: 48px;
-        background:rgba(66,66,66,0);
+        background:rgba(66,66,66,0.4);
         position: absolute;
         top: 186px;
         left: 0;
         line-height: 48px;
         color: white;
+        display: none;
     }
-    .JTleft:hover {
-        background:rgba(66,66,66,0.2);
+    .JTright:hover{
+        background-color: rgba(66,66,66,0.8);
+        cursor: pointer;
     }
     .JTright {
         width: 20px;
         height: 48px;
-        background:rgba(66,66,66,0);
+        background:rgba(66,66,66,0.4);
         position: absolute;
         top: 186px;
         right: 0;
         line-height: 48px;
         color: white;
-    }
-    .JTright:hover{
-        background:rgba(66,66,66,0.2);
+        display: none;
     }
     .contentList-four{
         margin-right: 0;
@@ -834,15 +850,18 @@ a{
         margin-left: 48px;
         margin-bottom: 10px;
     }
-    .contentList-one a{
+    .contentList-one>span{
         display: block;
-        width: 276px;
+        /*width: 276px;*/
         height: 21px;
         color: #333;
         line-height: 16px;
         font-size: 14px;
         margin: 0 10px 15px;
         text-align: center;
+    }
+    .contentList-one>span>a{
+        color: #000;
     }
     .CL-picture{
         width: 216px;
@@ -866,33 +885,34 @@ a{
     }
     .dot-xx{
         display: inline-block;
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
         margin: 0 2px;
         padding: 10px;
         line-height: 10px;
-
     }
     .dot-xx-act{
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         background: #b0b0b0;
         border-radius: 6px;
         /*margin: 0 auto;*/
         display: inline-block;
+        box-sizing: border-box;
     }
     .dot-xx-act:hover{
-        background: #ff6700;
+        border: 2px solid #ff6700;
         cursor: pointer;
-
+        background: white;
     }
     .dots23{
         display: inline-block;
-        width: 6px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         border: 2px solid #ff6700;
         border-radius: 6px;
         margin:0 auto;
+        box-sizing: border-box;
     }
 
     /*小米首页内容部分结束*/
@@ -1189,5 +1209,4 @@ a{
         line-height: 19px;
         text-align: center;
     }
-
     /*小米首页底部信息栏结束*/
